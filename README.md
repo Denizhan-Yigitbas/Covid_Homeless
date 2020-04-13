@@ -55,6 +55,7 @@ From this graphic, we can see that California, Massachusets, New York, Oregon, a
 would need to allocate the most amount of rooms out of all 50 states. However, it is important to note that even with 
 these states, the maximum percentage of the rooms occupied is still less than 20%.
 
+---
 
 The first cost consideration for each hotel would be the number of employees required to take care of the new
 guests. This cost for each state is dependent on the number of rooms required for each state which is calculated using
@@ -69,7 +70,17 @@ With these values, the following table lays out the employee cost for each state
 
 ![Employee Cost](img/daily_employee_cost_table.png)
 
+---
 
+The second monetary value that was considered was the revenue each hotel would typically be making for having guests in 
+each of these rooms. The hotels should be compensated for giving out these rooms. In order to calucate the compensation
+value, the average nightly hotel rate in the US was used ($180.12). Each hotel would be given 40% of this national
+average ($72.05) for every room given to the homeless each night. The compensation amounts for each state is detailed in
+the following table:
+
+![Guest Fee Cost](img/daily_guest_fee_table.png)
+
+---
 
 All of this analyis so far leads to one table that sums it all. This table shows the total daily cost for each state and
 all of its contributing factors.
