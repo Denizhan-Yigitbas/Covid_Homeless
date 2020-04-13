@@ -318,6 +318,7 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
                      ax=None, **kwargs):
     if ax is None:
         size = (np.array(data.shape[::-1]) + np.array([0, 1])) * np.array([col_width, row_height])
+        size[0] = 15.2
         size[1] = 0.6 * size[1]
         fig, ax = plt.subplots(figsize=size)
         ax.axis('off')
@@ -343,6 +344,6 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
 daily_employee_cost(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, table_viz=True, bar_viz=False)
 # daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
-total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True)
+# total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True)
 
 # daily_cost_for_state("Texas")
