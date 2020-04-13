@@ -318,6 +318,7 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
                      ax=None, **kwargs):
     if ax is None:
         size = (np.array(data.shape[::-1]) + np.array([0, 1])) * np.array([col_width, row_height])
+        size[0] = 15.2
         size[1] = 0.6 * size[1]
         fig, ax = plt.subplots(figsize=size)
         ax.axis('off')
