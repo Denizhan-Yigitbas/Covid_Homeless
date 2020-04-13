@@ -44,4 +44,4 @@ on the economic feasibility this transfer.
 
 ## Results
 
-![Alt](https://github.com/Denizhan-Yigitbas/Covid_Homeless/blob/master/img/total_daily_cost_table.png)
+![Total Cost](img/total_daily_cost_table.png)
