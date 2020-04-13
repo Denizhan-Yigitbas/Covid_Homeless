@@ -84,4 +84,6 @@ the following table:
 
 All of this analyis so far leads to one table that sums it all. This table shows the total daily cost for each state and
 all of its contributing factors.
-![Total Cost](img/total_daily_cost_table.png)
+
+![Total Cost Bar](img/total_daily_cost.png)
+![Total Cost Table](img/total_daily_cost_table.png)
