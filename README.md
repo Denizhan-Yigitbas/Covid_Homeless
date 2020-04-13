@@ -26,3 +26,22 @@ This project will work to answer this overarching question:
 would be needed.
 
 - What would be the cost of sheltering the homeless population in hotel room.
+
+
+## Data Collection
+
+The two obvious data sets that were going to be needed were hotel data specific to each state and homeless population 
+data. The American Hotel & Lodging Association website provided the desired data about hotels. In order to extract these
+features a self-made scraper was used to get information on the number of hotels, rooms available, and jobs provided by 
+the hotel industry in a specific state. Next, data provided by the United States Interagency Council on Homelessness
+was used to extract the data needed for the other half of this project. Although many features detailing the homeless 
+population were extracted using another self-made scraper, the main statistic that was used in this project was the total 
+homeless population for each state.
+
+Finally, a data set mapping each state to its minimum wage was found in order to perform more accurate estimations
+on the economic feasibility this transfer.
+
+
+## Results
+
+![img/total_daily_cost_table.png]
