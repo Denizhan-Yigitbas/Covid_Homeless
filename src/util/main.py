@@ -288,9 +288,9 @@ def total_daily_state_costs(people_per_room, employees_needed_per_10_rooms, min_
         ax = display_df(df_new, col_width=3.8)
     
         plt.title("Total Daily Cost \n {} employees per 10 rooms - {}% Minimum Wage Inflation \n "
-                  "Guest Fee Per Day - Nightly Rate = ${:,.2f} \n (Avg National Nightly Rate = ${:,.2f})"
+                  "Nightly Rate = ${:,.2f} ({}% of National Avg)"
                   .format(employees_needed_per_10_rooms, 100 * min_wage_inflation_percentage,
-                          avg_hotel_rate * percent_of_avg_nightly_fee, avg_hotel_rate)
+                          avg_hotel_rate * percent_of_avg_nightly_fee, percent_of_avg_nightly_fee * 100)
                   , pad=20)
         plt.subplots_adjust(top=.92, bottom=0.02)
         plt.savefig("../../img/total_daily_cost_table.png")
@@ -343,6 +343,6 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
 # daily_employee_cost(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, table_viz=True, bar_viz=True)
 # daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
-print(total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True))
+total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True)
 
 # daily_cost_for_state("Texas")

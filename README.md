@@ -1,1 +1,28 @@
 # Sheltering the Homeless During a Pandemic
+
+## Introduction
+
+The COVID-19 has caused significant changes in almost every American's daily life. However, one of the populations
+that seems to be ignored is the homeless population. However, we fail to realize the impact that this population can
+have on the virus' spread. In only San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
+amongst the homeless population, almost 10 percent of all cases.  Dr. Katie Brooks from the San Francisco General 
+Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street". In order to ease the spread of the virus and 
+also care for a population that is need of help, we must find alternate solutions during this pandemic.
+
+To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless 
+population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials 
+turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal 
+social distancing guidelines."
+
+This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: 
+"There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to 
+temporarily house them there? And fund permanent housing!"
+
+Castro's tweet sparks up the question if it is possible to house the homeless in the empty rooms caused by the COVID-19. 
+
+This project will work to answer this overarching question:
+
+- Is it feasible to house the entire homeless population in hotel rooms during this pandemic. And if so , how many rooms 
+would be needed.
+
+- What would be the cost of sheltering the homeless population in hotel room.
