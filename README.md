@@ -6,8 +6,9 @@ The COVID-19 has caused significant changes in almost every American's daily lif
 that seems to be ignored is the homeless population. However, we fail to realize the impact that this population can
 have on the virus' spread. In only San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
 amongst the homeless population, almost 10 percent of all cases.  Dr. Katie Brooks from the San Francisco General 
-Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street". In order to ease the spread of the virus and 
-also care for a population that is need of help, we must find alternate solutions during this pandemic.
+Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street". 
+In order to ease the spread of the virus and also care for a population that is need of help, we must find alternate 
+solutions during this pandemic.
 
 To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless 
 population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials 
@@ -22,10 +23,10 @@ Castro's tweet sparks up the question if it is possible to house the homeless in
 
 This project will work to answer this overarching question:
 
-- Is it feasible to house the entire homeless population in hotel rooms during this pandemic. And if so , how many rooms 
-would be needed.
+1. Is it feasible to house the entire homeless population in hotel rooms during this pandemic? And if so , how many rooms 
+would be needed?
 
-- What would be the cost of sheltering the homeless population in hotel room.
+2. What would be the cost of sheltering the homeless population in hotel room?
 
 
 ## Data Collection
@@ -42,6 +43,18 @@ Finally, a data set mapping each state to its minimum wage was found in order to
 on the economic feasibility this transfer.
 
 
-## Results
+## Process, Reasoning, and Results
 
+The first step to take using the extracted data was to answer the first question: Is it feasible to house the entire 
+homeless population in hotel rooms during this pandemic. And if so , how many rooms would be needed? The following 
+figure illustrates the percent of the total rooms the homeless population would occupy assuming that each room is filled
+with 2 people.
+![Percent Composition](img/all_homeless_in_all_rooms_percentage.png)
+From this graphic, we can see that California, Massachusets, New York, Oregon, and Washington would be the states that
+would need to allocate the most amount of rooms out of all 50 states. However, it is important to note that even with 
+these states, the maximum percentage of the rooms occupied is still less than 20%
+
+
+All of this analyis so far leads to one table that sums it all. This table shows the total daily cost for each state and
+all of its contributing factors.
 ![Total Cost](img/total_daily_cost_table.png)
