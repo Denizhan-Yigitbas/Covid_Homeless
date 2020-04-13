@@ -26,7 +26,8 @@ This project will work to answer this overarching question:
 1. Is it feasible to house the entire homeless population in hotel rooms during this pandemic? And if so , how many rooms 
 would be needed?
 
-2. What would be the cost of sheltering the homeless population in hotel room?
+2. What would be the cost of sheltering the homeless population in hotel room? Could the government fund this transfer
+through another stimulus bill?
 
 
 ## Data Collection
@@ -52,7 +53,22 @@ with 2 people.
 ![Percent Composition](img/all_homeless_in_all_rooms_percentage.png)
 From this graphic, we can see that California, Massachusets, New York, Oregon, and Washington would be the states that
 would need to allocate the most amount of rooms out of all 50 states. However, it is important to note that even with 
-these states, the maximum percentage of the rooms occupied is still less than 20%
+these states, the maximum percentage of the rooms occupied is still less than 20%.
+
+
+The first cost consideration for each hotel would be the number of employees required to take care of the new
+guests. This cost for each state is dependent on the number of rooms required for each state which is calculated using
+the percent compositition found in the first step. Other significant factors (and selected values in parenthesis) that 
+were taken into consideration included the following:
+1. The number of guests per room (2)
+2. The number of employees needed per 10 rooms (1)
+3. The minimum hourly wage for each state and a percentage to increase it by for working during these times (10%)
+4. The typical number of work hours for a hotel employee (8)
+
+With these values, the following table lays out the employee cost for each state.
+
+![Employee Cost](img/daily_employee_cost_table.png)
+
 
 
 All of this analyis so far leads to one table that sums it all. This table shows the total daily cost for each state and
