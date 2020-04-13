@@ -258,7 +258,7 @@ def daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=False
     return df[["state", "guest_fee"]]
 
 # main
-def total_daily_state_costs(people_per_room, employees_needed_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True):
+def total_daily_state_costs(people_per_room, employees_needed_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True):
     
     employee_cost_df = daily_employee_cost(people_per_room, employees_needed_per_10_rooms, min_wage_inflation_percentage, work_day_hrs)
     guest_fee_df = daily_guest_fee(people_per_room, percent_of_avg_nightly_fee)
@@ -270,7 +270,30 @@ def total_daily_state_costs(people_per_room, employees_needed_per_10_rooms, min_
     sum_emp = df["tot_daily_employee_cost"].sum()
     sum_guest = df["guest_fee"].sum()
     sum_tot = df["total"].sum()
-    
+
+    if bar_viz:
+        df_viz = df[["state", "total"]]
+        ax = df_viz.plot.bar(x='state', y='total', rot=90, figsize=(15, 8), legend=False)
+        
+        plt.xlabel("State", labelpad=15)
+        plt.ylabel("Cost ($)", labelpad=15)
+        plt.title("Total Daily Cost \n {} employees per 10 rooms - {}% Minimum Wage Inflation \n "
+                  "Nightly Rate = ${:,.2f} ({}% of National Avg)"
+                  .format(employees_needed_per_10_rooms, 100 * min_wage_inflation_percentage,
+                          avg_hotel_rate * percent_of_avg_nightly_fee, percent_of_avg_nightly_fee * 100)
+                  , pad=20)
+        xmin, xmax, ymin, ymax = plt.axis()
+        plt.text(0.75 * xmax, 0.80 * ymax, "Total National Daily Cost = ${:,.2f}".format(sum_tot), size=15, rotation=0.,
+                 ha="center", va="center",
+                 bbox=dict(boxstyle="round",
+                           ec=(1., 0.5, 0.5),
+                           fc=(1., 0.8, 0.8),
+                           )
+                 )
+        plt.subplots_adjust(bottom=0.25, right=0.95, left=0.10)
+        plt.savefig("../../img/total_daily_cost.png")
+        plt.show()
+
 
     if table_viz:
         df_new = df.copy()
@@ -342,8 +365,8 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
 # homeless_pop_vs_avail_rooms(people_per_room, viz=True)
 # number_of_rooms_reserved(people_per_room, viz=True)
 # daily_employee_cost(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, table_viz=True, bar_viz=False)
-daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
+# daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
-# total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True)
+total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
 # daily_cost_for_state("Texas")
