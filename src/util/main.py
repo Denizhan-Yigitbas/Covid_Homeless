@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import six
 import numpy as np
+import datetime
 
 # to ignore pandas warnings
 import warnings
@@ -320,10 +321,59 @@ def total_daily_state_costs(people_per_room, employees_needed_per_10_rooms, min_
         plt.show()
     
     return df
+
+def durational_total_state_costs(table_viz=True):
+    today = datetime.datetime.today()
+    days_1 = today + datetime.timedelta(days=1)
+    days_15 = today + datetime.timedelta(days=15)
+    days_30 = today + datetime.timedelta(days=30)
+    days_45 = today + datetime.timedelta(days=45)
+    days_60 = today + datetime.timedelta(days=60)
     
+    df = total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=False, bar_viz=False)
+    
+    
+    df["15_days"] = df["total"] * 15
+    df["30_days"] = df["total"] * 30
+    df["45_days"] = df["total"] * 45
+    df["60_days"] = df["total"] * 60
+    
+    df.rename(columns={"total":"1_day"}, inplace=True)
+
+    sum_1 = df["1_day"].sum()
+    sum_15 = df["15_days"].sum()
+    sum_30 = df["30_days"].sum()
+    sum_45 = df["45_days"].sum()
+    sum_60 = df["60_days"].sum()
+    
+    df_out = df[["state", "1_day", "15_days", "30_days", "45_days", "60_days"]]
+    
+    if table_viz:
+        df_out.rename(columns={"state": "State", "1_day": "1 Night ({})".format(days_1.strftime("%b %d")),
+                               "15_days": "15 Nights ({})".format(days_15.strftime("%b %d")),
+                               "30_days": "30 Nights ({})".format(days_30.strftime("%b %d")),
+                               "45_days": "45 Nights ({})".format(days_45.strftime("%b %d")),
+                               "60_days": "60 Nights ({})".format(days_60.strftime("%b %d"))},inplace=True)
+        tot_row = ["TOTAL", sum_1, sum_15, sum_30, sum_45, sum_60]
+        df_out.loc[len(df)] = tot_row
+    
+        for idx in range(1, len(list(df_out.columns))):
+            cols = list(df_out.columns)
+            df_out[cols[idx]] = df_out[cols[idx]].apply(lambda x: "${:,.2f}".format(x))
+            
+        
+        ax = display_df(df_out, col_width=10.8)
+    
+        plt.title("Total Durational Costs \n Today: {}".format(today.strftime("%b %d, %Y"))
+                  , pad=20)
+        plt.subplots_adjust(top=.95, bottom=0.02, left=0.02, right=0.98)
+        plt.savefig("../../img/durational_total_costs_table.png")
+        plt.show()
+        
+    return df_out
     
 def daily_cost_for_state(state):
-    df = employee_cost(num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs)
+    df = daily_employee_cost(num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs)
     
     df = df[["state", "tot_daily_employee_cost"]]
     
@@ -367,6 +417,7 @@ def display_df(data, col_width=3.0, row_height=0.625, font_size=14,
 # daily_employee_cost(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, table_viz=True, bar_viz=False)
 # daily_guest_fee(people_per_room, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
-total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
+# total_daily_state_costs(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, work_day_hrs, percent_of_avg_nightly_fee, table_viz=True, bar_viz=True)
 
+durational_total_state_costs(table_viz=True)
 # daily_cost_for_state("Texas")

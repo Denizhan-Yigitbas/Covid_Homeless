@@ -2,18 +2,21 @@
 
 ## Introduction
 
-The COVID-19 has caused significant changes in almost every American's daily life. However, one of the populations
-that seems to be ignored is the homeless population. However, we fail to realize the impact that this population can
-have on the virus' spread. In only San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
-amongst the homeless population, almost 10 percent of all cases.  Dr. Katie Brooks from the San Francisco General 
-Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street". 
+Althought the COVID-19 has caused significant changes in almost every American's daily life, one of the populations
+that seems to be ignored is the homeless population. We fail to realize the impact that this population can
+have on the virus' spread. In San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
+amongst the homeless population ()almost 10 percent of all cases). Dr. Katie Brooks from the San Francisco General 
+Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street"(Bond). 
 In order to ease the spread of the virus and also care for a population that is need of help, we must find alternate 
-solutions during this pandemic.
+solutions during this pandemic. Jack Chase, a family medicine doctor and leader of the hospital’s social medicine team
+in San Fransico, stated “This pandemic, like any crisis, is unmasking the preexisting vulnerabilities in the system by 
+placing greater pressure on an already stressed system. We have to invest in the care and social needs for both the 
+vulnerable people and everybody else. It benefits everybody to care for the most vulnerable” (Bond).
 
 To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless 
 population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials 
 turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal 
-social distancing guidelines."
+social distancing guidelines" (Koran).
 
 This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: 
 "There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to 
@@ -23,7 +26,7 @@ Castro's tweet sparks up the question if it is possible to house the homeless in
 
 This project will work to answer this overarching question:
 
-1. Is it feasible to house the entire homeless population in hotel rooms during this pandemic? And if so , how many rooms 
+1. Is it feasible to house the entire homeless population in hotel rooms during this pandemic? And if so, how many rooms 
 would be needed?
 
 2. What would be the cost of sheltering the homeless population in hotel room? Could the government fund this transfer
@@ -59,7 +62,7 @@ these states, the maximum percentage of the rooms occupied is still less than 20
 
 The first cost consideration for each hotel would be the number of employees required to take care of the new
 guests. This cost for each state is dependent on the number of rooms required for each state which is calculated using
-the percent compositition found in the first step. Other significant factors (and selected values in parenthesis) that 
+the percent composition found in the first step. Other significant factors (and selected values in parenthesis) that 
 were taken into consideration included the following:
 1. The number of guests per room (2)
 2. The number of employees needed per 10 rooms (1)
@@ -73,7 +76,7 @@ With these values, the following table lays out the employee cost for each state
 ---
 
 The second monetary value that was considered was the revenue each hotel would typically be making for having guests in 
-each of these rooms. The hotels should be compensated for giving out these rooms. In order to calucate the compensation
+each of these rooms. The hotels should be compensated for giving out these rooms. In order to calcucate the compensation
 value, the average nightly hotel rate in the US was used ($180.12). Each hotel would be given 40% of this national
 average ($72.05) for every room given to the homeless each night. The compensation amounts for each state is detailed in
 the following table:
@@ -82,8 +85,26 @@ the following table:
 
 ---
 
-All of this analyis so far leads to one table that sums it all. This table shows the total daily cost for each state and
+All of this analyis so far leads to one table that sums it all for daily cost. This table shows the total daily cost for each state and
 all of its contributing factors.
 
 ![Total Cost Bar](img/total_daily_cost.png)
 ![Total Cost Table](img/total_daily_cost_table.png)
+
+***
+
+We can now analyze the cost for different durations. The following table illustrates the total cost for each state
+as well as the national cost for sheltering the homeless in hotel up to 60 days.
+
+![Durational Cost](img/durational_total_costs_table.png)
+
+
+
+
+## Sources
+
+Bond, Allison. “As Covid-19 Surges among Homeless, Doctors Face Difficult Choices.” STAT, 11 Apr. 2020, 
+www.statnews.com/2020/04/11/coronavirus-san-francisco-homeless-doctors-difficult-choices/.
+
+Koran, Mario. “Las Vegas Parking Lot Turned into 'Homeless Shelter' with Social Distancing Markers.” 
+The Guardian, Guardian News and Media, 31 Mar. 2020, www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter.
