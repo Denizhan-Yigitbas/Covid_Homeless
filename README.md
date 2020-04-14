@@ -94,7 +94,8 @@ all of its contributing factors.
 ***
 
 We can now analyze the cost for different durations. The following table illustrates the total cost for each state
-as well as the national cost for sheltering the homeless in hotel up to 60 days.
+as well as the national cost for sheltering the homeless in hotel up to 60 days (dates may not be up to date, however 
+total costs are constant).
 
 ![Durational Cost](img/durational_total_costs_table.png)
 
