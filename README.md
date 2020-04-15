@@ -100,6 +100,13 @@ total costs are constant).
 ![Durational Cost](img/durational_total_costs_table.png)
 
 
+## Conclusion
+As we all know, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 
+trillion and include relief for major industries such as airlines, small businesses that have seen revenues dwindle or 
+disappear, and workers facing layoffs and loss of health coverage" (Zarracina). In comparison, with the costs calculated
+in the project, the total cost to shelter the entire US homeless population in hotel rooms around the nation for 60
+days would be a little over 1.3 billion. This is only 0.065% of the proposed stimulus bill. This is such a small 
+percentage that it could simply be added on to shelter the homeless population during this pandemic. 
 
 
 ## Sources
@@ -109,3 +116,7 @@ www.statnews.com/2020/04/11/coronavirus-san-francisco-homeless-doctors-difficult
 
 Koran, Mario. “Las Vegas Parking Lot Turned into 'Homeless Shelter' with Social Distancing Markers.” 
 The Guardian, Guardian News and Media, 31 Mar. 2020, www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter.
+
+Zarracina, Javier, et al. “Congress' $2 Trillion Coronavirus Stimulus Package, Visualized.” USA Today, 
+Gannett Satellite Information Network, 25 Mar. 2020, 
+www.usatoday.com/in-depth/news/2020/03/23/congress-stimulus-packages-coronavirus-graphics/2890864001/.
