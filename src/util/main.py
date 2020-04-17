@@ -3,16 +3,23 @@ import matplotlib.pyplot as plt
 import six
 import numpy as np
 import datetime
+import os
 
 # to ignore pandas warnings
 import warnings
 warnings.filterwarnings("ignore")
 
 class Main():
-    def __init__(self):     
-        hotel_data = pd.read_csv("../../data/hotel_data.csv", index_col=False)
-        homeless_data = pd.read_csv("../../data/homeless_data.csv", index_col=False)
-        minimum_wage_data = pd.read_csv("../../data/minimum_wage.csv", index_col=False)
+    root_path = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(
+        root_path,
+        '../../data/'
+    )
+    
+    def __init__(self, people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage):
+        hotel_data = pd.read_csv(Main.data_path + "hotel_data.csv", index_col=False)
+        homeless_data = pd.read_csv(Main.data_path + "homeless_data.csv", index_col=False)
+        minimum_wage_data = pd.read_csv(Main.data_path + "minimum_wage.csv", index_col=False)
 
         self.all_data = hotel_data.join(homeless_data.set_index("state"), on="state")\
             .join(minimum_wage_data.set_index("state"), on="state")
@@ -22,18 +29,18 @@ class Main():
         
         # percent of avg nightly rate
         self.percent_of_avg_nightly_fee = 0.40
-        
-        # Number of people in a single room
-        self.people_per_room = 2
-        
-        # Number of employees required per 10 rooms to take care of homeless population
-        self.num_employees_per_10_rooms = 1
-        
-        # inflation rate to pay hotel employees extra for working
-        self.min_wage_inflation_percentage = 0.10
-        
+
         # work day hours for a hotel employee
         self.work_day_hrs = 8
+        
+        # Number of people in a single room
+        self.people_per_room = people_per_room
+        
+        # Number of employees required per 10 rooms to take care of homeless population
+        self.num_employees_per_10_rooms = num_employees_per_10_rooms
+        
+        # inflation rate to pay hotel employees extra for working
+        self.min_wage_inflation_percentage = min_wage_inflation_percentage
 
     def homeless_pop_vs_avail_rooms(self, bar_viz=False):
         """
@@ -277,7 +284,7 @@ class Main():
         
         return df[["state", "total"]]
 
-    def durational_total_state_costs(self, table_viz=True):
+    def durational_total_state_costs(self, table_viz=False):
         """
         Computes the total cost for states over different periods of time (1, 15, 30, 45, 60 days)
         
@@ -385,7 +392,8 @@ class Main():
 
 
 if __name__ == "__main__":
-    m = Main()
+    pass
+    # m = Main()
     # m.homeless_pop_vs_avail_rooms(bar_viz=True)
     # m.number_of_rooms_reserved(bar_viz=True)
     # m.daily_employee_cost(table_viz=True, bar_viz=True)
