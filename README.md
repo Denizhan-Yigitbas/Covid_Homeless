@@ -35,7 +35,7 @@ through another stimulus bill?
 
 ## Data Collection
 
-The two obvious data sets that were going to be needed were hotel data specific to each state and homeless population 
+The two primary data sets that are required are hotel data specific to each state and homeless population 
 data. The American Hotel & Lodging Association website provided the desired data about hotels. In order to extract these
 features a self-made scraper was used to get information on the number of hotels, rooms available, and jobs provided by 
 the hotel industry in a specific state. Next, data provided by the United States Interagency Council on Homelessness
@@ -48,6 +48,7 @@ on the economic feasibility this transfer.
 
 
 ## Process, Reasoning, and Results
+(The following results can be calculated with custom inputs outlined in the [Reproduce Financial Analysis with User Defined Inputs](#reproduce-financial-analysis-with-user-defined-inputs) section)<br>
 
 The first step to take using the extracted data was to answer the first question: Is it feasible to house the entire 
 homeless population in hotel rooms during this pandemic. And if so , how many rooms would be needed? The following 
@@ -122,7 +123,7 @@ Variables to change: number of people kept in a single room, number of employees
 
 1. From the project home directory run: `pip install -r requirements.txt`
 
-2. From the project home directory run: `python run_this.py natoinal_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage]` and replace brackets with values (percentage are kept in decimal form)
+2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage]` and replace brackets with values (percentage are kept in decimal form, so 10% would be input as .10)
 
 <i> Example: </i>
 
@@ -130,7 +131,7 @@ Input:  `python run_this.py national_financial_analysis 2 1 0.10`
 
 Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for their state by 10.0% for each employee:<br> 
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the minimum wage for their state by 10.0% for each employee:<br> 
 
 The total durational cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
 
