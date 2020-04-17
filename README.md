@@ -123,11 +123,11 @@ Variables to change: number of people kept in a single room, number of employees
 
 1. From the project home directory run: `pip install -r requirements.txt`
 
-2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage]` and replace brackets with values (percentage are kept in decimal form, so 10% would be input as .10)
+2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage] [nightly_compensation]` and replace brackets with values (percentage are kept in decimal form, so 10% would be input as .10)
 
 <i> Example: </i>
 
-Input:  `python run_this.py national_financial_analysis 2 1 0.10`
+Input:  `python run_this.py national_financial_analysis 2 1 0.10 72.02`
 
 Output: <br>
 
