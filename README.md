@@ -2,14 +2,17 @@
 
 ## Introduction
 
-Although the COVID-19 has caused significant changes in every American's daily life, one of the populations that has been the most  ignored is the homeless population. We fail to realize the impact that this population can have on the virus' spread.
-In San Francisco, out of about 800 known cases in the city, 68 have been reported to be amongst the homeless population (almost 10 percent of all cases), according to the STAT News Covid-19 Tracker (Bond). Dr. Katie Brooks from the San Francisco General Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street" (Bond). In order to ease the spread of the virus and also care for a population that is in need of help, we must find alternate solutions during this pandemic. Jack Chase, a family medicine doctor and leader of the hospital’s social medicine team in San Francisco, stated “This pandemic, like any crisis, is unmasking the pre existing vulnerabilities in the system by placing greater pressure on an already stressed system. We have to invest in the care and social needs for both the vulnerable people and everybody else. It benefits everybody to care for the most vulnerable” (Bond).
-To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal social distancing guidelines" (Koran).
+Although the COVID-19 has caused significant changes in every American's daily life, one of the populations that has been the most  ignored is the homeless population. We fail to realize the impact that this population can have on the virus' spread. <br>
+
+In San Francisco, out of about 800 known cases in the city, 68 have been reported to be amongst the homeless population (almost 10 percent of all cases), according to the STAT News Covid-19 Tracker (Bond). Dr. Katie Brooks from the San Francisco General Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street" (Bond). In order to ease the spread of the virus and also care for a population that is in need of help, we must find alternate solutions during this pandemic. Jack Chase, a family medicine doctor and leader of the hospital’s social medicine team in San Francisco, stated “This pandemic, like any crisis, is unmasking the pre existing vulnerabilities in the system by placing greater pressure on an already stressed system. We have to invest in the care and social needs for both the vulnerable people and everybody else. It benefits everybody to care for the most vulnerable” (Bond). <br>
+
+To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal social distancing guidelines" (Koran). <br>
 
 ![Vegas](https://www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter#img-1)
 
-This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: "There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to temporarily house them there? And fund permanent housing!"
-Castro's tweet begs the question if it is possible to house the homeless in the empty rooms caused by the COVID-19.
+This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: "There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to temporarily house them there? And fund permanent housing!" <br>
+
+Castro's tweet begs the question if it is possible to house the homeless in the empty rooms caused by the COVID-19. <br>
  
 
 This project will work to answer this overarching question:
