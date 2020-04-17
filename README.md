@@ -96,7 +96,7 @@ total costs are constant).
 
 This project sought to answer two questions related to a potential agreement between the public and private sector to house homeless individuals with hotel rooms: how many rooms would be required, and what would that cost would be. Based on available data, states would use between 1% (in the case of Wyoming) and up to 20% (in the case of New York) of all available hotel rooms. Most states would use between 2% and 6% of available hotel rooms, with states with larger homeless populations (California, Oregon, Massachusetts, Washington), using between 10% and 15% of available rooms. This number is significantly less than the available number of hotel rooms, suggesting the logistic feasibility of this measure. <br>
 
-To determine the estimated cost of providing housing to homeless individuals, the cost for employees and guests were calculated per day, based on number of rooms needed, typical work hours per employee, a 10% raise on minimum wage, and national average cost per hotel room. Using these estimates, the total national daily cost to house all homeless individuals is 22.5 million dollars per day, which would be 1.35 billion dollars for 60 days. While these estimates rely on somewhat conservative measures for employee pay, and the cost of reassigning guest rooms do not reflect statewide and local differences in the granular costs for each hotel room, the total cost to provide housing provides the best estimate given the available data. <br>
+To determine the estimated cost of providing housing to homeless individuals, the cost for employees and guests were calculated per day, based on number of rooms needed, typical work hours per employee, a 50% raise on minimum wage, and national average cost per hotel room. Using these estimates, the total national daily cost to house all homeless individuals is 22.5 million dollars per day, which would be 1.35 billion dollars for 60 days. While these estimates rely on somewhat conservative measures for employee pay, and the cost of reassigning guest rooms do not reflect statewide and local differences in the granular costs for each hotel room, the total cost to provide housing provides the best estimate given the available data. <br>
 
 The total cost to house the entire homeless population during this pandemic is thus miniscule compared to the fiscal stimulus packages provided by Congress. Reported in USA Today on March 25, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 trillion and include relief for major industries such as airlines, small businesses that have seen revenues dwindle or disappear, and workers facing layoffs and loss of health coverage" (Zarracina). With the costs calculated in the project, the total financial responsibility of sheltering the entire US homeless population in hotel rooms for 60 days would be under 1.4 billion, about 0.07% of the proposed stimulus bill. This cost is small enough that public officials ought to have added this measure for both the epidemiological and humanitarian benefits of slowing the spread of of COVID-19 and reducing the risk to vulnerable populations. <br>
 
@@ -113,23 +113,23 @@ Variables to change: number of people kept in a single room, number of employees
 
 1. From the project home directory run: `pip install -r requirements.txt`
 
-2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage] [nightly_compensation]` and replace brackets with values (percentage are kept in decimal form, so 10% would be input as .10)
+2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage] [nightly_compensation]` and replace brackets with values (percentage are kept in decimal form, so 50% would be input as .50)
 
 <i> Example: </i>
 
-Input:  `python run_this.py national_financial_analysis 2 1 0.10 72.02`
+Input:  `python run_this.py national_financial_analysis 2 1 0.50 72.02`
 
 Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, inflate the miniumum wage for thier state by 10.0% for each employee, and are compensated $72.05 per night per room: <br> 
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, inflate the miniumum wage for thier state by 50.0% for each employee, and are compensated $72.05 per night per room: <br> 
 
-The total durational cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
+The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows: <br> 
 
-Housing for 1 Night Cost: $22,496,373.61 --> Percentage of stimulus bill 0.0011248186805% <br>
-Housing for 15 Nights Cost: $337,445,604.15 --> Percentage of stimulus bill 0.0168722802075% <br>
-Housing for 30 Nights Cost: $674,891,208.30 --> Percentage of stimulus bill 0.033744560415% <br>
-Housing for 45 Nights Cost: $1,012,336,812.45 --> Percentage of stimulus bill 0.0506168406225% <br>
-Housing for 60 Nights Cost: $1,349,782,416.60 --> Percentage of stimulus bill 0.06748912083% <br>
+Housing for 1 Night Cost: $23,398,276.43 --> Percentage of stimulus bill 0.0011699138215% <br>
+Housing for 15 Nights Cost: $350,974,146.45 --> Percentage of stimulus bill 0.0175487073225% <br>
+Housing for 30 Nights Cost: $701,948,292.90 --> Percentage of stimulus bill 0.035097414645% <br>
+Housing for 45 Nights Cost: $1,052,922,439.35 --> Percentage of stimulus bill 0.05264612196750001% <br>
+Housing for 60 Nights Cost: $1,403,896,585.80 --> Percentage of stimulus bill 0.07019482929% <br>
 
 ## Sources
 
