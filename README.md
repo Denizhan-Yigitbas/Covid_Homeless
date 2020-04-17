@@ -5,9 +5,7 @@
 Althought the COVID-19 has caused significant changes in almost every American's daily life, one of the populations
 that seems to be ignored is the homeless population. We fail to realize the impact that this population can
 have on the virus' spread. In San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
-amongst the homeless population ()almost 10 percent of all cases). Dr. Katie Brooks from the San Francisco General 
-Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street"(Bond). 
-In order to ease the spread of the virus and also care for a population that is need of help, we must find alternate 
+amongst the homeless population (almost 10 percent of all cases), according to the STAT News Covid-19 Tracker (Bond). Dr. Katie Brooks from the San Francisco General Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street"(Bond). In order to ease the spread of the virus and also care for a population that is need of help, we must find alternate 
 solutions during this pandemic. Jack Chase, a family medicine doctor and leader of the hospital’s social medicine team
 in San Fransico, stated “This pandemic, like any crisis, is unmasking the preexisting vulnerabilities in the system by 
 placing greater pressure on an already stressed system. We have to invest in the care and social needs for both the 
@@ -101,7 +99,7 @@ total costs are constant).
 
 
 ## Conclusion
-As we all know, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 
+The United States government has attempted to rectify economic and public health concerns with stimulus packages. Reported in USA Today on March 25, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 
 trillion and include relief for major industries such as airlines, small businesses that have seen revenues dwindle or 
 disappear, and workers facing layoffs and loss of health coverage" (Zarracina). In comparison, with the costs calculated
 in the project, the total cost to shelter the entire US homeless population in hotel rooms around the nation for 60
