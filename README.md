@@ -110,6 +110,39 @@ The total cost to house the entire homeless population during this pandemic is t
 days would be under 1.4 billion. This less than 0.07% of the proposed stimulus bill. This cost is small enough that public officials ought to have added this measure for both the epidemiological and humanitarian benefits of slowing the spread of of Covid-19 and reducing the risk to vulnerable populations.
 
 
+## Reproduce Financial Analysis with User Defined Inputs
+The implemented Command Line Interface will allow users to see the effect or varying the variables used in this project on the total durational cost and percentage of the proposed $2 trillion stimulus package.
+
+Variables to change: number of people kept in a single room, number of employees needed per 10 rooms, and minimum wage inflation percentage.
+
+(Nightly hotel compensation rate and work day hours are kept constant at about $70 per night and 8 hours per day respectively)
+
+
+<b><u> Instructions: </u></b>
+
+1. From the project home directory run: `pip install -r requirements.txt`
+
+2. From the project home directory run: `python run_this.py natoinal_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage]` and replace brackets with values (percentage are kept in decimal form)
+
+<i> Example: </i>
+
+Input:  `python run_this.py natoinal_financial_analysis 2 1 0.10`
+
+Output: <br>
+---------------------------------------------------------------------------------------------
+
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for thier state by 10.0% for each employee: 
+
+The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows: 
+
+Housing for 1 Night Cost: $22,496,373.61 --> Percentage of stimulus bill 0.0011248186805%
+Housing for 15 Nights Cost: $337,445,604.15 --> Percentage of stimulus bill 0.0168722802075%
+Housing for 30 Nights Cost: $674,891,208.30 --> Percentage of stimulus bill 0.033744560415%
+Housing for 45 Nights Cost: $1,012,336,812.45 --> Percentage of stimulus bill 0.0506168406225%
+Housing for 60 Nights Cost: $1,349,782,416.60 --> Percentage of stimulus bill 0.06748912083%
+
+---------------------------------------------------------------------------------------------
+
 ## Sources
 
 Bond, Allison. “As Covid-19 Surges among Homeless, Doctors Face Difficult Choices.” STAT, 11 Apr. 2020, 
