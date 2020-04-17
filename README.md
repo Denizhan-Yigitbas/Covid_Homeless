@@ -126,13 +126,13 @@ Variables to change: number of people kept in a single room, number of employees
 
 <i> Example: </i>
 
-Input:  `python run_this.py natoinal_financial_analysis 2 1 0.10`
+Input:  `python run_this.py national_financial_analysis 2 1 0.10`
 
 Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for thier state by 10.0% for each employee:<br> 
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for their state by 10.0% for each employee:<br> 
 
-The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
+The total durational cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
 
 Housing for 1 Night Cost: $22,496,373.61 --> Percentage of stimulus bill 0.0011248186805% <br>
 Housing for 15 Nights Cost: $337,445,604.15 --> Percentage of stimulus bill 0.0168722802075% <br>
