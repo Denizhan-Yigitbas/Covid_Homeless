@@ -48,7 +48,7 @@ on the economic feasibility this transfer.
 
 
 ## Process, Reasoning, and Results
-(The following results can be calculated with custom inputs outline in the [Reproduce Financial Analysis with User Defined Inputs](#reproduce-financial-analysis-with-user-defined-inputs) section)<br>
+(The following results can be calculated with custom inputs outlined in the [Reproduce Financial Analysis with User Defined Inputs](#reproduce-financial-analysis-with-user-defined-inputs) section)<br>
 
 The first step to take using the extracted data was to answer the first question: Is it feasible to house the entire 
 homeless population in hotel rooms during this pandemic. And if so , how many rooms would be needed? The following 
