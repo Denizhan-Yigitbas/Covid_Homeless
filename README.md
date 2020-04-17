@@ -18,6 +18,8 @@ population when a 500-bed overnight shelter closed after a client tested positiv
 turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal 
 social distancing guidelines" (Koran).
 
+![Vegas](https://www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter#img-1)
+
 This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: 
 "There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to 
 temporarily house them there? And fund permanent housing!"
