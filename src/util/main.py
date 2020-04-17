@@ -16,7 +16,7 @@ class Main():
         '../../data/'
     )
     
-    def __init__(self, people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage):
+    def __init__(self, people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, nightly_compensation):
         hotel_data = pd.read_csv(Main.data_path + "hotel_data.csv", index_col=False)
         homeless_data = pd.read_csv(Main.data_path + "homeless_data.csv", index_col=False)
         minimum_wage_data = pd.read_csv(Main.data_path + "minimum_wage.csv", index_col=False)
@@ -24,11 +24,9 @@ class Main():
         self.all_data = hotel_data.join(homeless_data.set_index("state"), on="state")\
             .join(minimum_wage_data.set_index("state"), on="state")
 
-        # 2017 avg nightly hotel rate in US - https://www.businesstravelnews.com/Corporate-Travel-Index/2018/Demand-Drives-US-Hotels
-        self.avg_hotel_rate = 180.12
         
-        # percent of avg nightly rate
-        self.percent_of_avg_nightly_fee = 0.40
+        # Compensation fee paid to hotels per night per room
+        self.nightly_compenstation = nightly_compensation
 
         # work day hours for a hotel employee
         self.work_day_hrs = 8
@@ -168,8 +166,13 @@ class Main():
         :return: dataframe with columns: state,  guest_fee
         """
         df = self.number_of_rooms_reserved()
+        # 2017 avg nightly hotel rate in US - https://www.businesstravelnews.com/Corporate-Travel-Index/2018/Demand-Drives-US-Hotels
+        avg_hotel_rate = 180.12
+
+        # percent of avg nightly rate
+        percent_of_avg_nightly_fee = 0.40
         
-        nightly_fee = self.avg_hotel_rate * self.percent_of_avg_nightly_fee
+        nightly_fee = avg_hotel_rate * percent_of_avg_nightly_fee
         df["guest_fee"] = round(df["num_reserved_rooms"] * nightly_fee, 2)
     
         sum = df["guest_fee"].sum()
@@ -177,7 +180,7 @@ class Main():
         if bar_viz:
             df_viz = df[["state", "guest_fee"]]
             ax = df_viz.plot.bar(x='state', y='guest_fee', rot=90, figsize=(15, 8), legend=False)
-            plt.title("Guest Fee Per Day - Nightly Rate = ${:,.2f} \n (Avg National Nightly Rate = ${:,.2f})"
+            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f} \n (Avg National Nightly Compensation Rate = ${:,.2f})"
                       .format(nightly_fee, self.avg_hotel_rate))
             plt.xlabel("State", labelpad=15)
             plt.ylabel("Cost ($)", labelpad=15)
@@ -204,7 +207,7 @@ class Main():
             df_new.rename(columns={"state": "State", "guest_fee": "Guest Fee Per Day"}, inplace=True)
             ax = self.__display_df(df_new, col_width=3.8)
         
-            plt.title("Guest Fee Per Day - Nightly Rate = ${:,.2f} \n (Avg National Nightly Rate = ${:,.2f})"
+            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f} \n (Avg National Nightly Compensation Rate = ${:,.2f})"
                       .format(nightly_fee, self.avg_hotel_rate)
                       , pad=20)
             plt.subplots_adjust(top=.95, bottom=0.02)
@@ -241,9 +244,9 @@ class Main():
             plt.xlabel("State", labelpad=15)
             plt.ylabel("Cost ($)", labelpad=15)
             plt.title("Total Daily Cost \n {} employees per 10 rooms - {}% Minimum Wage Inflation \n "
-                      "Nightly Rate = ${:,.2f} ({}% of National Avg)"
+                      "Nightly Compensation Rate = ${:,.2f}"
                       .format(self.num_employees_per_10_rooms, 100 * self.min_wage_inflation_percentage,
-                              self.avg_hotel_rate * self.percent_of_avg_nightly_fee, self.percent_of_avg_nightly_fee * 100)
+                              self.nightly_compenstation)
                       , pad=20)
             xmin, xmax, ymin, ymax = plt.axis()
             plt.text(0.75 * xmax, 0.80 * ymax, "Total National Daily Cost = ${:,.2f}".format(sum_tot), size=15, rotation=0.,
@@ -274,9 +277,9 @@ class Main():
             ax = self.__display_df(df_new, col_width=3.8)
         
             plt.title("Total Daily Cost \n {} employees per 10 rooms - {}% Minimum Wage Inflation \n "
-                      "Nightly Rate = ${:,.2f} ({}% of National Avg)"
+                      "Nightly Compensation Rate = ${:,.2f}"
                       .format(self.num_employees_per_10_rooms, 100 * self.min_wage_inflation_percentage,
-                              self.avg_hotel_rate * self.percent_of_avg_nightly_fee, self.percent_of_avg_nightly_fee * 100)
+                              self.nightly_compenstation)
                       , pad=20)
             plt.subplots_adjust(top=.92, bottom=0.02)
             plt.savefig("../../img/total_daily_cost_table.png")
@@ -393,7 +396,7 @@ class Main():
 
 if __name__ == "__main__":
     pass
-    # m = Main()
+    # m = Main(2, 1, 0.10, 72.05)
     # m.homeless_pop_vs_avail_rooms(bar_viz=True)
     # m.number_of_rooms_reserved(bar_viz=True)
     # m.daily_employee_cost(table_viz=True, bar_viz=True)

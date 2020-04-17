@@ -3,8 +3,8 @@ import fire
 from src.util.main import Main
 
 class FireCLI():
-    def national_financial_analysis(self, people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage):
-        df = Main(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage)\
+    def national_financial_analysis(self, people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, nightly_compensation):
+        df = Main(people_per_room, num_employees_per_10_rooms, min_wage_inflation_percentage, nightly_compensation)\
             .durational_total_state_costs()
 
         sum_1 = df["1_day"].sum()
