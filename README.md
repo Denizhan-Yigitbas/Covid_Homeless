@@ -101,12 +101,13 @@ total costs are constant).
 
 
 ## Conclusion
-The United States government has attempted to rectify economic and public health concerns with stimulus packages. Reported in USA Today on March 25, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 
-trillion and include relief for major industries such as airlines, small businesses that have seen revenues dwindle or 
-disappear, and workers facing layoffs and loss of health coverage" (Zarracina). In comparison, with the costs calculated
-in the project, the total cost to shelter the entire US homeless population in hotel rooms around the nation for 60
-days would be a little over 1.3 billion. This is only 0.065% of the proposed stimulus bill. This is such a small 
-percentage that it could simply be added on to shelter the homeless population during this pandemic. 
+
+This project sought to answer two questions related to a potential agreement between the public and private sector to house homeless individuals with hotel rooms: how many rooms would be required, and what that cost would be. Based on available data, states would use between 1% (in the case of Wyoming) and up to 20% (in the case of New York). Most states would use between 2 and 6% of available hotel rooms, with states with larger homeless populations (California, Oregon, Massachusetts, Washington), using between 10 and 15% of available rooms. This number is signicantly less than the available number of hotel rooms, suggesting the logistic feasability of such an agreement.
+
+To determine the estimated cost of providing housing to homeless individuals, the cost for employees and guests were calculated per day, based on number of rooms needed, typical work hours per employee, a 10% raise on minimum wage, and national average cost per hotel room. Using these estimates, the total national daily cost to house all homeless individuals is 22.5 million dollars per day, which would be 1.35 billion dollars per day. While these estimates rely on somewhat conservative measures for employee pay, and the cost of missing do not reflect statewide and local differences in the granular costs for each hotel room, the total cost to provide housing provides the best estimate given the available data. 
+
+The total cost to house the entire homeless population during this pandemic is thus miniscule compared to the fiscal stimulus packages provided by congress. Reported in USA Today on March 25, "congressional leaders have struck a broad compromise on a third stimulus package that could reach $2 trillion and include relief for major industries such as airlines, small businesses that have seen revenues dwindle or disappear, and workers facing layoffs and loss of health coverage" (Zarracina). With the costs calculated in the project, the total financial responsibility of sheltering the entire US homeless population in hotel rooms for 60
+days would be under 1.4 billion. This less than 0.07% of the proposed stimulus bill. This cost is small enough that public officials ought to have added this measure for both the epidemiological and humanitarian benefits of slowing the spread of of Covid-19 and reducing the risk to vulnerable populations.
 
 
 ## Sources
