@@ -18,8 +18,9 @@ class FireCLI():
         print("Assuming hotels house " + str(people_per_room) +
               " people per room, use " + str(num_employees_per_10_rooms) +
               " employees per 10 rooms used for the homeless, "
-              "and inflate the miniumum wage for thier state by "
-              + str(min_wage_inflation_percentage * 100 )+ "% for each employee: \n")
+              "inflate the miniumum wage for thier state by "
+              + str(min_wage_inflation_percentage * 100 )+ "% for each employee, " +
+              "and are compensated ${:,.2f} per night per room: \n".format(nightly_compensation))
         
         print("The total duratoinal cost and "
               "percent of the passed 2 trillion dollar stimulus bill would be as follows: \n")

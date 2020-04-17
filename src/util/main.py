@@ -166,22 +166,16 @@ class Main():
         :return: dataframe with columns: state,  guest_fee
         """
         df = self.number_of_rooms_reserved()
-        # 2017 avg nightly hotel rate in US - https://www.businesstravelnews.com/Corporate-Travel-Index/2018/Demand-Drives-US-Hotels
-        avg_hotel_rate = 180.12
-
-        # percent of avg nightly rate
-        percent_of_avg_nightly_fee = 0.40
         
-        nightly_fee = avg_hotel_rate * percent_of_avg_nightly_fee
-        df["guest_fee"] = round(df["num_reserved_rooms"] * nightly_fee, 2)
+        df["guest_fee"] = round(df["num_reserved_rooms"] * self.nightly_compenstation, 2)
     
         sum = df["guest_fee"].sum()
     
         if bar_viz:
             df_viz = df[["state", "guest_fee"]]
             ax = df_viz.plot.bar(x='state', y='guest_fee', rot=90, figsize=(15, 8), legend=False)
-            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f} \n (Avg National Nightly Compensation Rate = ${:,.2f})"
-                      .format(nightly_fee, self.avg_hotel_rate))
+            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f}"
+                      .format(self.nightly_compenstation))
             plt.xlabel("State", labelpad=15)
             plt.ylabel("Cost ($)", labelpad=15)
         
@@ -207,8 +201,8 @@ class Main():
             df_new.rename(columns={"state": "State", "guest_fee": "Guest Fee Per Day"}, inplace=True)
             ax = self.__display_df(df_new, col_width=3.8)
         
-            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f} \n (Avg National Nightly Compensation Rate = ${:,.2f})"
-                      .format(nightly_fee, self.avg_hotel_rate)
+            plt.title("Guest Fee Per Day - Nightly Compensation Rate = ${:,.2f}"
+                      .format(self.nightly_compenstation)
                       , pad=20)
             plt.subplots_adjust(top=.95, bottom=0.02)
             plt.savefig("../../img/daily_guest_fee_table.png")
@@ -396,13 +390,13 @@ class Main():
 
 if __name__ == "__main__":
     pass
-    # m = Main(2, 1, 0.10, 72.05)
+    m = Main(2, 1, 0.10, 72.05)
     # m.homeless_pop_vs_avail_rooms(bar_viz=True)
     # m.number_of_rooms_reserved(bar_viz=True)
     # m.daily_employee_cost(table_viz=True, bar_viz=True)
-    # m.daily_guest_fee(table_viz=True, bar_viz=True)
+    m.daily_guest_fee(table_viz=True, bar_viz=True)
     
-    # m.total_daily_state_costs(table_viz=True, bar_viz=True)
+    m.total_daily_state_costs(table_viz=True, bar_viz=True)
     
-    # m.durational_total_state_costs(table_viz=True)
+    m.durational_total_state_costs(table_viz=True)
     # m.daily_cost_for_state("Texas")
