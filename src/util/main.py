@@ -390,13 +390,13 @@ class Main():
 
 if __name__ == "__main__":
     pass
-    m = Main(2, 1, 0.10, 72.05)
-    # m.homeless_pop_vs_avail_rooms(bar_viz=True)
-    # m.number_of_rooms_reserved(bar_viz=True)
-    # m.daily_employee_cost(table_viz=True, bar_viz=True)
+    m = Main(2, 1, 0.50, 72.05)
+    m.homeless_pop_vs_avail_rooms(bar_viz=True)
+    m.number_of_rooms_reserved(bar_viz=True)
+    m.daily_employee_cost(table_viz=True, bar_viz=True)
     m.daily_guest_fee(table_viz=True, bar_viz=True)
     
     m.total_daily_state_costs(table_viz=True, bar_viz=True)
     
     m.durational_total_state_costs(table_viz=True)
-    # m.daily_cost_for_state("Texas")
+    m.daily_cost_for_state("Texas")
