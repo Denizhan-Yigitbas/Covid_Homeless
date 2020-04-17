@@ -8,7 +8,7 @@ In San Francisco, out of about 800 known cases in the city, 68 have been reporte
 
 To combat this issue, "authorities in Las Vegas needed to find additional sleeping space for the city’s sizable homeless population when a 500-bed overnight shelter closed after a client tested positive for the new coronavirus. Officials turned a parking lot into a makeshift shelter, saying spaces for sleeping were drawn 6ft apart in observance of federal social distancing guidelines" (Koran). <br>
 
-![Vegas](https://www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter#img-1)
+![Vegas](https://i.guim.co.uk/img/media/7ce9f6ee642841b30b1d1904a267411431516326/0_232_3500_2101/master/3500.jpg?width=1920&quality=85&auto=format&fit=max&s=547f1993581dd80e4567c7d5150b322d)
 
 This action sparked a lot of commentary amongst the general population. Julián Castro, Mayor of San Antonio, tweeted: "There are 150K hotel rooms in Vegas going unused right now. How about public-private cooperation (resources) to temporarily house them there? And fund permanent housing!" <br>
 
