@@ -130,16 +130,15 @@ Input:  `python run_this.py natoinal_financial_analysis 2 1 0.10`
 
 Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for thier state by 10.0% for each employee: 
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for thier state by 10.0% for each employee:<br> 
 
-The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows: 
+The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
 
-Housing for 1 Night Cost: $22,496,373.61 --> Percentage of stimulus bill 0.0011248186805%
-Housing for 15 Nights Cost: $337,445,604.15 --> Percentage of stimulus bill 0.0168722802075%
-Housing for 30 Nights Cost: $674,891,208.30 --> Percentage of stimulus bill 0.033744560415%
-Housing for 45 Nights Cost: $1,012,336,812.45 --> Percentage of stimulus bill 0.0506168406225%
-Housing for 60 Nights Cost: $1,349,782,416.60 --> Percentage of stimulus bill 0.06748912083%
-
+Housing for 1 Night Cost: $22,496,373.61 --> Percentage of stimulus bill 0.0011248186805% <br>
+Housing for 15 Nights Cost: $337,445,604.15 --> Percentage of stimulus bill 0.0168722802075% <br>
+Housing for 30 Nights Cost: $674,891,208.30 --> Percentage of stimulus bill 0.033744560415% <br>
+Housing for 45 Nights Cost: $1,012,336,812.45 --> Percentage of stimulus bill 0.0506168406225% <br>
+Housing for 60 Nights Cost: $1,349,782,416.60 --> Percentage of stimulus bill 0.06748912083% <br>
 
 ## Sources
 
