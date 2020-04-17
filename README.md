@@ -121,7 +121,7 @@ Input:  `python run_this.py national_financial_analysis 2 1 0.10 72.02`
 
 Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the minimum wage for their state by 10.0% for each employee:<br> 
+Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, inflate the miniumum wage for thier state by 10.0% for each employee, and are compensated $72.05 per night per room: <br> 
 
 The total durational cost and percent of the passed 2 trillion dollar stimulus bill would be as follows:<br> 
 
