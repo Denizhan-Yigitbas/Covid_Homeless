@@ -35,7 +35,7 @@ through another stimulus bill?
 
 ## Data Collection
 
-The two obvious data sets that were going to be needed were hotel data specific to each state and homeless population 
+The two primary data sets that are required are hotel data specific to each state and homeless population 
 data. The American Hotel & Lodging Association website provided the desired data about hotels. In order to extract these
 features a self-made scraper was used to get information on the number of hotels, rooms available, and jobs provided by 
 the hotel industry in a specific state. Next, data provided by the United States Interagency Council on Homelessness
