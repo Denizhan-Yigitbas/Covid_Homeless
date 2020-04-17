@@ -4,7 +4,9 @@
 
 Althought the COVID-19 has caused significant changes in almost every American's daily life, one of the populations
 that seems to be ignored is the homeless population. We fail to realize the impact that this population can
-have on the virus' spread. In San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
+have on the virus' spread. 
+
+In San Fransico, out of about 800 known cases in the city, 68 have been reported to be 
 amongst the homeless population (almost 10 percent of all cases), according to the STAT News Covid-19 Tracker (Bond). Dr. Katie Brooks from the San Francisco General Hospital stated “I am having a really tough time discharging people from the hospital to anywhere but to the street"(Bond). In order to ease the spread of the virus and also care for a population that is need of help, we must find alternate 
 solutions during this pandemic. Jack Chase, a family medicine doctor and leader of the hospital’s social medicine team
 in San Fransico, stated “This pandemic, like any crisis, is unmasking the preexisting vulnerabilities in the system by 
