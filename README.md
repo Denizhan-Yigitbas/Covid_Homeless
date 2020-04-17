@@ -129,7 +129,6 @@ Variables to change: number of people kept in a single room, number of employees
 Input:  `python run_this.py natoinal_financial_analysis 2 1 0.10`
 
 Output: <br>
----------------------------------------------------------------------------------------------
 
 Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, and inflate the miniumum wage for thier state by 10.0% for each employee: 
 
@@ -141,7 +140,6 @@ Housing for 30 Nights Cost: $674,891,208.30 --> Percentage of stimulus bill 0.03
 Housing for 45 Nights Cost: $1,012,336,812.45 --> Percentage of stimulus bill 0.0506168406225%
 Housing for 60 Nights Cost: $1,349,782,416.60 --> Percentage of stimulus bill 0.06748912083%
 
----------------------------------------------------------------------------------------------
 
 ## Sources
 
