@@ -134,11 +134,11 @@ Housing for 60 Nights Cost: $1,403,896,585.80 --> Percentage of stimulus bill 0.
 ## Sources
 
 Bond, Allison. “As Covid-19 Surges among Homeless, Doctors Face Difficult Choices.” STAT, 11 Apr. 2020, 
-www.statnews.com/2020/04/11/coronavirus-san-francisco-homeless-doctors-difficult-choices/.
+www.statnews.com/2020/04/11/coronavirus-san-francisco-homeless-doctors-difficult-choices/
 
 Koran, Mario. “Las Vegas Parking Lot Turned into 'Homeless Shelter' with Social Distancing Markers.” 
-The Guardian, Guardian News and Media, 31 Mar. 2020, www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter.
+The Guardian, Guardian News and Media, 31 Mar. 2020, www.theguardian.com/us-news/2020/mar/30/las-vegas-parking-lot-homeless-shelter
 
 Zarracina, Javier, et al. “Congress' $2 Trillion Coronavirus Stimulus Package, Visualized.” USA Today, 
 Gannett Satellite Information Network, 25 Mar. 2020, 
-www.usatoday.com/in-depth/news/2020/03/23/congress-stimulus-packages-coronavirus-graphics/2890864001/.
+www.usatoday.com/in-depth/news/2020/03/23/congress-stimulus-packages-coronavirus-graphics/2890864001/
