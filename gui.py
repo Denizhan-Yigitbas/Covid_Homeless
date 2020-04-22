@@ -274,18 +274,19 @@ from src.util.main import Main
 class GUI(Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
-    
+        self.parent = parent
         if parent.tk.call('tk', 'windowingsystem') == 'aqua':  # only for OSX
             s = ttk.Style()
             # Note: the name is specially for the text in the widgets
             s.configure('TNotebook.Tab', padding=(12, 8, 12, 0))
-        width = 1000
+        width = 950
         height = 700
         self.bg_color = "white"
     
         parent.title("Sheltering the Homeless During a Pandemic")
         parent.geometry(str(width) + "x" + str(height))
-        self.tab_control = ttk.Notebook(parent)
+        
+        
         self.init_ui()
     
     def init_ui(self):
@@ -295,13 +296,14 @@ class GUI(Frame):
 
     def create_tabs(self):
         # Create Tab Control
+        tab_control = ttk.Notebook(self.parent)
         # Tab1
-        self.tab1 = Frame(self.tab_control, background=self.bg_color)
-        self.tab_control.add(self.tab1, text='National Level')
+        self.tab1 = Frame(tab_control, background=self.bg_color)
+        tab_control.add(self.tab1, text='National Level')
         # Tab2
-        self.tab2 = Frame(self.tab_control, background=self.bg_color)
-        self.tab_control.add(self.tab2, text='State Level')
-        self.tab_control.pack(expand=1, fill="both")
+        self.tab2 = Frame(tab_control, background=self.bg_color)
+        tab_control.add(self.tab2, text='State Level')
+        tab_control.pack(expand=1, fill="both")
 
     def national_level(self):
         """
@@ -429,6 +431,14 @@ class GUI(Frame):
         output_vals = Text(outputs_lf, width=120, height=14, wrap=WORD, padx=10)
         output_vals.grid(row=6, column=0, columnspan=4)
         output_vals.configure(state='disabled')
+
+        # spacer
+        lbl_spacer = Label(self.tab1, text="", background=self.bg_color)
+        lbl_spacer.grid(row=9, column=0, columnspan=4)
+
+        btn_exit = ttk.Button(self.tab1, text="Exit", width=15, command=self.parent.destroy)
+        btn_exit.grid(row=10, column=0, columnspan=4)
+        
         
     def state_level(self):
         """
@@ -555,8 +565,8 @@ class GUI(Frame):
         entry_st.grid(row=2, column=1)
 
         # spacer
-        lbl_spacer = Label(state_inputs_lf, text="", background=self.bg_color)
-        lbl_spacer.grid(row=4, column=0, columnspan=4)
+        # lbl_spacer = Label(state_inputs_lf, text="", background=self.bg_color)
+        # lbl_spacer.grid(row=4, column=0, columnspan=4)
 
         btn_calculate = ttk.Button(state_inputs_lf, text="Calculate", width=15, command=click_state)
         btn_calculate.grid(row=5, column=0, columnspan=4)
@@ -577,6 +587,13 @@ class GUI(Frame):
         output_state_vals = Text(state_outputs_lf, width=120, height=16, wrap=WORD, background=self.bg_color, padx=10)
         output_state_vals.grid(row=8, column=0, columnspan=4)
         output_state_vals.configure(state='disabled')
+
+        # spacer
+        lbl_spacer = Label(self.tab2, text="", background=self.bg_color)
+        lbl_spacer.grid(row=9, column=0, columnspan=4)
+        
+        btn_exit = ttk.Button(self.tab2, text="Exit", width=15, command=self.parent.destroy)
+        btn_exit.grid(row=10, column=0, columnspan=4)
         
         
 if __name__ == '__main__':
