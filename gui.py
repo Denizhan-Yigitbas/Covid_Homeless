@@ -17,7 +17,7 @@ def click():
     output_vals.delete(0.0, END)
     
     output_vars = "Assuming hotels house " + str(ppr) + " people per room, use " + str(
-        ep10) + " employees per 10 rooms, inflate the miniumum wage for thier state by " + str(
+        ep10) + " employees per 10 rooms, inflate the minimum wage for their state by " + str(
         mwi) + "% for each employee, and are compensated $" + str(
         nc) + " per night per room: \n"
     
@@ -33,17 +33,17 @@ def click():
     sum_45 = df["45_days"].sum()
     sum_60 = df["60_days"].sum()
 
-    one = "The total duratoinal cost and percent of the passed $2 trillion stimulus bill would be as follows: \n\n"
+    one = "The total durational cost and percent of the passed $2 trillion stimulus bill would be as follows: \n\n"
 
-    two = "Housing for 1 Night Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_1, sum_1 / 2000000000000 * 100.0)
+    two = "Housing for 1 Night Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_1, sum_1 / 2000000000000 * 100.0)
 
-    three = "Housing for 15 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_15, sum_15 / 2000000000000 * 100.0)
+    three = "Housing for 15 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_15, sum_15 / 2000000000000 * 100.0)
 
-    four = "Housing for 30 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_30, sum_30 / 2000000000000 * 100.0)
+    four = "Housing for 30 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_30, sum_30 / 2000000000000 * 100.0)
 
-    five = "Housing for 45 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_45, sum_45 / 2000000000000 * 100.0)
+    five = "Housing for 45 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_45, sum_45 / 2000000000000 * 100.0)
 
-    six = "Housing for 60 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_60, sum_60 / 2000000000000 * 100.0)
+    six = "Housing for 60 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_60, sum_60 / 2000000000000 * 100.0)
     
     final_output = one+two+three+four+five+six
     
@@ -70,7 +70,7 @@ def click_state():
     
     output_vars = "In the state of " + st[0].upper() + st[1:].lower() + ", assuming hotels house " + str(
         ppr) + " people per room, use " + str(
-        ep10) + " employees per 10 rooms, inflate the miniumum wage for thier state by " + str(
+        ep10) + " employees per 10 rooms, inflate the minimum wage for their state by " + str(
         mwi) + "% for each employee, and are compensated $" + str(
         nc) + " per night per room: \n"
     
@@ -98,21 +98,21 @@ def click_state():
     sum_45 = df["45_days"].values[0]
     sum_60 = df["60_days"].values[0]
     
-    one = "The total duratoinal cost and percent of the passed $2 trillion stimulus bill would be as follows: \n\n"
+    one = "The total durational cost and percent of the passed $2 trillion stimulus bill would be as follows: \n\n"
     
-    two = "Housing for 1 Night Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_1,
+    two = "Housing for 1 Night Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_1,
                                                                                              sum_1 / 2000000000000 * 100.0)
     
-    three = "Housing for 15 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_15,
+    three = "Housing for 15 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_15,
                                                                                                  sum_15 / 2000000000000 * 100.0)
     
-    four = "Housing for 30 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_30,
+    four = "Housing for 30 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_30,
                                                                                                 sum_30 / 2000000000000 * 100.0)
     
-    five = "Housing for 45 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_45,
+    five = "Housing for 45 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_45,
                                                                                                 sum_45 / 2000000000000 * 100.0)
     
-    six = "Housing for 60 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_60,
+    six = "Housing for 60 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {:3.4f}% \n".format(sum_60,
                                                                                                sum_60 / 2000000000000 * 100.0)
     
     final_output = ov + one + two + three + four + five + six
@@ -151,7 +151,7 @@ lbl_people_per_room.grid(row=0, column=0)
 lbl_num_employees_per_10_rooms = Label(tab1, text="Employees Per 10 Rooms: ", background=bg_color)
 lbl_num_employees_per_10_rooms.grid(row=0, column=2)
 
-lbl_min_wage_inflation_percentage = Label(tab1, text="Miniumum Wage Inflation Percentage: ", background=bg_color)
+lbl_min_wage_inflation_percentage = Label(tab1, text="Minimum Wage Inflation Percentage: ", background=bg_color)
 lbl_min_wage_inflation_percentage.grid(row=1, column=0)
 
 lbl_nightly_compensation = Label(tab1, text="Nightly Hotel Compensation", background=bg_color)
