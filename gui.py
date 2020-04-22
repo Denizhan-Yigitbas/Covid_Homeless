@@ -386,7 +386,7 @@ class GUI(Frame):
                                                   background=self.bg_color)
         lbl_min_wage_inflation_percentage.grid(row=1, column=0)
     
-        lbl_nightly_compensation = Label(inputs_lf, text="Nightly Hotel Compensation", background=self.bg_color)
+        lbl_nightly_compensation = Label(inputs_lf, text="Nightly Hotel Compensation: ($) ", background=self.bg_color)
         lbl_nightly_compensation.grid(row=1, column=2)
     
         # Define the Entries
@@ -426,7 +426,7 @@ class GUI(Frame):
         output_title.configure(state='disabled')
         output_title.grid(row=5, column=0, columnspan=4)
     
-        output_vals = Text(outputs_lf, width=120, height=10, wrap=WORD, padx=10)
+        output_vals = Text(outputs_lf, width=120, height=14, wrap=WORD, padx=10)
         output_vals.grid(row=6, column=0, columnspan=4)
         output_vals.configure(state='disabled')
         
@@ -511,7 +511,7 @@ class GUI(Frame):
             output_state_vals.configure(state='disabled')
 
         # Create a LabelFrame for the inputs
-        state_inputs_lf = LabelFrame(self.tab2, text='Inputs', background=self.bg_color, padx=50, pady=20)
+        state_inputs_lf = LabelFrame(self.tab2, text='Inputs', background=self.bg_color, padx=30, pady=20)
         state_inputs_lf.grid(row=0, column=0, columnspan=4, rowspan=5)
         
         # Define the Input Labels
@@ -526,7 +526,7 @@ class GUI(Frame):
                                                         background=self.bg_color)
         lbl_min_wage_inflation_percentage_state.grid(row=1, column=0)
 
-        lbl_nightly_compensation_state = Label(state_inputs_lf, text="Nightly Hotel Compensation",
+        lbl_nightly_compensation_state = Label(state_inputs_lf, text="Nightly Hotel Compensation: ($) ",
                                                background=self.bg_color)
         lbl_nightly_compensation_state.grid(row=1, column=2)
 
@@ -565,16 +565,16 @@ class GUI(Frame):
         lbl_spacer = Label(self.tab2, text="", background=self.bg_color)
         lbl_spacer.grid(row=6, column=0, columnspan=4)
 
-        # state_outputs_lf = LabelFrame(self.tab1, text='Results', background=self.bg_color)
-        # state_outputs_lf.grid(row=7, column=0, columnspan=4, rowspan=2)
+        state_outputs_lf = LabelFrame(self.tab2, text='Results', background=self.bg_color)
+        state_outputs_lf.grid(row=7, column=0, columnspan=4, rowspan=2)
     
         # Output text box
-        output_state_title = Text(self.tab2, width=120, height=5, wrap=WORD, background=self.bg_color, padx=10)
+        output_state_title = Text(state_outputs_lf, width=120, height=5, wrap=WORD, background=self.bg_color, padx=10)
         output_state_title.tag_configure("center", justify='center')
         output_state_title.configure(state='disabled')
         output_state_title.grid(row=7, column=0, columnspan=4)
     
-        output_state_vals = Text(self.tab2, width=120, height=14, wrap=WORD, background=self.bg_color, padx=10)
+        output_state_vals = Text(state_outputs_lf, width=120, height=16, wrap=WORD, background=self.bg_color, padx=10)
         output_state_vals.grid(row=8, column=0, columnspan=4)
         output_state_vals.configure(state='disabled')
         
