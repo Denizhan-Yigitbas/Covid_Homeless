@@ -200,16 +200,16 @@ output_vals.configure(state='disabled')
 
 
 # Define the Input Labels
-lbl_people_per_room_state = Label(tab2, text="People Per Room: ", pady=20)
+lbl_people_per_room_state = Label(tab2, text="People Per Room: ", pady=20, background=bg_color)
 lbl_people_per_room_state.grid(row=0, column=0)
 
-lbl_num_employees_per_10_rooms_state = Label(tab2, text="Employees Per 10 Rooms: ")
+lbl_num_employees_per_10_rooms_state = Label(tab2, text="Employees Per 10 Rooms: ", background=bg_color)
 lbl_num_employees_per_10_rooms_state.grid(row=0, column=2)
 
-lbl_min_wage_inflation_percentage_state = Label(tab2, text="Miniumum Wage Inflation Percentage: ")
+lbl_min_wage_inflation_percentage_state = Label(tab2, text="Miniumum Wage Inflation Percentage: ", background=bg_color)
 lbl_min_wage_inflation_percentage_state.grid(row=1, column=0)
 
-lbl_nightly_compensation_state = Label(tab2, text="Nightly Hotel Compensation")
+lbl_nightly_compensation_state = Label(tab2, text="Nightly Hotel Compensation", background=bg_color)
 lbl_nightly_compensation_state.grid(row=1, column=2)
 
 lbl_state = Label(tab2, text="State", pady=20)
@@ -237,14 +237,14 @@ entry_st = Entry(tab2, textvariable=txt_state)
 entry_st.grid(row=2, column=1)
 
 # spacer
-lbl_spacer = Label(tab2, text="")
+lbl_spacer = Label(tab2, text="", background=bg_color)
 lbl_spacer.grid(row=3, column=0, columnspan=4)
 
 btn_calculate = ttk.Button(tab2, text="Calculate", width=15,  command=click_state)
 btn_calculate.grid(row=4, column=0, columnspan=4)
 
 # spacer
-lbl_spacer = Label(tab2, text="")
+lbl_spacer = Label(tab2, text="", background=bg_color)
 lbl_spacer.grid(row=5, column=0, columnspan=4)
 
 # Output text box
