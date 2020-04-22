@@ -279,7 +279,7 @@ class Main():
             plt.savefig("../../img/total_daily_cost_table.png")
             plt.show()
         
-        return df[["state", "total"]]
+        return df
 
     def durational_total_state_costs(self, table_viz=False):
         """
@@ -346,17 +346,20 @@ class Main():
         
         :return: None
         """
-        df = self.daily_employee_cost()
+        df = self.total_daily_state_costs()
         
-        df = df[["state", "tot_daily_employee_cost"]]
         
         df = df[df["state"].apply(lambda x: x.lower()) == state.lower()]
         
-        state_cost = df["tot_daily_employee_cost"].values[0]
+        emp_cost = df["tot_daily_employee_cost"].values[0]
+        compensation_cost = df["guest_fee"].values[0]
+        tot_cost = df["total"].values[0]
+        #
+        # formatted_emp_cost = "${:,.2f}".format(emp_cost)
+        # formatted_comp_cost = "${:,.2f}".format(compensation_cost)
+        # formatted_tot_cost = "${:,.2f}".format(tot_cost)
         
-        formatted_state_cost = "${:,.2f}".format(state_cost)
-        
-        print("Daily cost for the state of " + state + " = " +formatted_state_cost)
+        return emp_cost, compensation_cost, tot_cost
 
     def __display_df(self, data, col_width=3.0, row_height=0.625, font_size=14,
                          header_color='#40466e', row_colors=['#f1f1f2', 'w'], edge_color='w',
