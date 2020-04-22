@@ -39,7 +39,7 @@ on the economic feasibility of this transfer.
 
 
 ## Process, Reasoning, and Results
-(The following results can be calculated with custom inputs outlined in the [Reproduce Financial Analysis with User Defined Inputs](#reproduce-financial-analysis-with-user-defined-inputs) section)<br>
+(The following results can be calculated with custom inputs using the integrated GUI outlined in the [Reproduce Financial Analysis with User Defined Inputs](#reproduce-financial-analysis-with-user-defined-inputs) section)<br>
 
 The first step to take using the extracted data was to answer the first question: Is it feasible to house the entire 
 homeless population in hotel rooms during this pandemic. And if so, how many rooms would be needed? The following 
@@ -102,34 +102,24 @@ The total cost to house the entire homeless population during this pandemic is t
 
 
 ## Reproduce Financial Analysis with User Defined Inputs
-The implemented Command Line Interface will allow users to see the effect or varying the variables used in this project on the total durational cost and percentage of the proposed $2 trillion stimulus package.
+The implemented GUI will allow users to see the effect or varying the variables used in this project on the total durational cost and percentage of the proposed $2 trillion stimulus package both on a natoinal level and a state level. 
 
-Variables to change: number of people kept in a single room, number of employees needed per 10 rooms, and minimum wage inflation percentage.
+Variables to change: number of people kept in a single room, number of employees needed per 10 rooms, minimum wage inflation percentage, and nightly hotel compensation rate
 
-(Nightly hotel compensation rate and work day hours are kept constant at about $70 per night and 8 hours per day respectively)
+(Work day hours are kept constant at 8 hours per day)
 
 
 <b><u> Instructions: </u></b>
 
-1. From the project home directory run: `pip install -r requirements.txt`
+<b>Note: Must be on python3 </b>
 
-2. From the project home directory run: `python run_this.py national_financial_analysis [people_per_room] [num_employees_per_10_rooms] [min_wage_inflation_percentage] [nightly_compensation]` and replace brackets with values (percentage are kept in decimal form, so 50% would be input as .50)
+1. From the project home directory run: `pip install --user -r requirements.txt`
 
-<i> Example: </i>
+2. From the project home directory run: `python gui.py`
 
-Input:  `python run_this.py national_financial_analysis 2 1 0.50 72.02`
+3. Replace inputs variables with desired values and press the "Calculate" button to see the results
 
-Output: <br>
 
-Assuming hotels house 2 people per room, use 1 employees per 10 rooms used for the homeless, inflate the miniumum wage for thier state by 50.0% for each employee, and are compensated $72.05 per night per room: <br> 
-
-The total duratoinal cost and percent of the passed 2 trillion dollar stimulus bill would be as follows: <br> 
-
-Housing for 1 Night Cost: $23,398,276.43 --> Percentage of stimulus bill 0.0011699138215% <br>
-Housing for 15 Nights Cost: $350,974,146.45 --> Percentage of stimulus bill 0.0175487073225% <br>
-Housing for 30 Nights Cost: $701,948,292.90 --> Percentage of stimulus bill 0.035097414645% <br>
-Housing for 45 Nights Cost: $1,052,922,439.35 --> Percentage of stimulus bill 0.05264612196750001% <br>
-Housing for 60 Nights Cost: $1,403,896,585.80 --> Percentage of stimulus bill 0.07019482929% <br>
 
 ## Sources
 
