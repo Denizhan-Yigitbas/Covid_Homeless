@@ -272,7 +272,7 @@ class GUI(Frame):
                                                background=self.bg_color)
         lbl_nightly_compensation_state.grid(row=1, column=2)
 
-        lbl_state = Label(state_inputs_lf, text="State", pady=20)
+        lbl_state = Label(state_inputs_lf, text="State", pady=20, background=self.bg_color)
         lbl_state.grid(row=2, column=0)
 
         # Define the Entries
