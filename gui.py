@@ -129,7 +129,7 @@ window = Tk()
 
 width = 1000
 height = 700
-bg_color = bg_color
+bg_color = "white"
 
 window.title("Sheltering the Homeless During a Pandemic")
 window.geometry(str(width) + "x" + str(height))
