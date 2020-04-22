@@ -61,6 +61,7 @@ def click_state():
     mwi = txt_min_wage_inflation_percentage_state.get()
     nc = txt_nightly_compensation_state.get()
     st = txt_state.get()
+    st = st[0].upper() + st[1:]
     
     output_state_title.configure(state='normal')
     output_state_vals.configure(state='normal')
@@ -68,7 +69,7 @@ def click_state():
     output_state_title.delete(0.0, END)
     output_state_vals.delete(0.0, END)
     
-    output_vars = "In the state of " + st[0].upper() + st[1:].lower() + ", assuming hotels house " + str(
+    output_vars = "In the state of " + st + ", assuming hotels house " + str(
         ppr) + " people per room, use " + str(
         ep10) + " employees per 10 rooms, inflate the minimum wage for their state by " + str(
         mwi) + "% for each employee, and are compensated $" + str(
@@ -84,9 +85,9 @@ def click_state():
     formatted_comp_cost = "${:,.2f}".format(comp_cost)
     formatted_tot_cost = "${:,.2f}".format(tot_cost)
     
-    ov = "For " + st[0].upper() + st[1:].lower() + ", the employee cost per day would be " + formatted_emp_cost + \
+    ov = "For " + st + ", the employee cost per day would be " + formatted_emp_cost + \
          "and the nightly compensation cost per day would be " + formatted_comp_cost + \
-         "\n This means the total daily expense for the state of Texas would be " + formatted_tot_cost + "\n\n"
+         "\n This means the total daily expense for the state of " + st + " would be " + formatted_tot_cost + "\n\n"
 
     df = Main(ppr, ep10, mwi / 100, nc).durational_total_state_costs()
 
@@ -126,6 +127,11 @@ def click_state():
 
 
 window = Tk()
+# a fix for running on OSX - to center the title text vertically
+if window.tk.call('tk', 'windowingsystem') == 'aqua':  # only for OSX
+    s = ttk.Style()
+    # Note: the name is specially for the text in the widgets
+    s.configure('TNotebook.Tab', padding=(12, 8, 12, 0))
 
 width = 1000
 height = 700
