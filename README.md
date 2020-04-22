@@ -119,7 +119,13 @@ Variables to change: number of people kept in a single room, number of employees
 
 3. Replace inputs variables with desired values and press the "Calculate" button to see the results
 
+<i> National Level GUI: </i>
 
+![National Level GUI](img/national_level_gui.png)
+
+<i> State Level GUI: </i>
+
+![State Level GUI](img/state_level_gui.png)
 
 ## Sources
 
