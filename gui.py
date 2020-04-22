@@ -54,52 +54,94 @@ def click():
     output_title.configure(state='disabled')
     output_vals.configure(state='disabled')
 
+
+def click_state():
+    ppr = txt_people_per_room_state.get()
+    ep10 = txt_num_employees_per_10_rooms_state.get()
+    mwi = txt_min_wage_inflation_percentage_state.get()
+    nc = txt_nightly_compensation_state.get()
+    st = txt_state.get()
     
+    output_state_title.configure(state='normal')
+    output_state_vals.configure(state='normal')
+    
+    output_state_title.delete(0.0, END)
+    output_state_vals.delete(0.0, END)
+    
+    output_vars = "In the state of " + st[0].upper() + st[1:].lower() + ", assuming hotels house " + str(
+        ppr) + " people per room, use " + str(
+        ep10) + " employees per 10 rooms, inflate the miniumum wage for thier state by " + str(
+        mwi) + "% for each employee, and are compensated $" + str(
+        nc) + " per night per room: \n"
+    
+    output_state_title.insert(END, output_vars)
+    output_state_title.tag_add("title", "1.0", "1.end")
+    output_state_title.tag_config("title", font=("Arial", 15, "bold"), justify="center")
+    
+    emp_cost, comp_cost, tot_cost = Main(ppr, ep10, mwi / 100, nc).daily_cost_for_state(st)
+
+    formatted_emp_cost = "${:,.2f}".format(emp_cost)
+    formatted_comp_cost = "${:,.2f}".format(comp_cost)
+    formatted_tot_cost = "${:,.2f}".format(tot_cost)
+    
+    ov = "For " + st[0].upper() + st[1:].lower() + ", the employee cost per day would be " + formatted_emp_cost + \
+         "and the nightly compensation cost per day would be " + formatted_comp_cost + \
+         "\n This means the total daily expense for the state of Texas would be " + formatted_tot_cost + "\n\n"
+
+    df = Main(ppr, ep10, mwi / 100, nc).durational_total_state_costs()
+
+    df = df[df["state"].apply(lambda x: x.lower()) == st.lower()]
+
+    sum_1 = df["1_day"].values[0]
+    sum_15 = df["15_days"].values[0]
+    sum_30 = df["30_days"].values[0]
+    sum_45 = df["45_days"].values[0]
+    sum_60 = df["60_days"].values[0]
+    
+    one = "The total duratoinal cost and percent of the passed $2 trillion stimulus bill would be as follows: \n\n"
+    
+    two = "Housing for 1 Night Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_1,
+                                                                                             sum_1 / 2000000000000 * 100.0)
+    
+    three = "Housing for 15 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_15,
+                                                                                                 sum_15 / 2000000000000 * 100.0)
+    
+    four = "Housing for 30 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_30,
+                                                                                                sum_30 / 2000000000000 * 100.0)
+    
+    five = "Housing for 45 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_45,
+                                                                                                sum_45 / 2000000000000 * 100.0)
+    
+    six = "Housing for 60 Nights Cost: ${:,.2f} --> Percentage of stimulus bill {}% \n".format(sum_60,
+                                                                                               sum_60 / 2000000000000 * 100.0)
+    
+    final_output = ov + one + two + three + four + five + six
+    
+    output_state_vals.insert(END, final_output)
+    output_state_vals.tag_add("vals", "1.0", END)
+    output_state_vals.tag_config("vals", font=("Arial", 14), justify="center")
+    
+    output_state_title.configure(state='disabled')
+    output_state_vals.configure(state='disabled')
+
+
 window = Tk()
 
-width = 850
-height = 450
+width = 1000
+height = 700
 
 window.title("Sheltering the Homeless During a Pandemic")
 window.geometry(str(width) + "x" + str(height))
 
-# style = ttk.Style()
-# style.theme_create('st', settings={
-#     ".": {
-#         "configure": {
-#             "background": "white",
-#         }
-#     },
-#     "TNotebook": {
-#         "configure": {
-#             "tabmargins": [2, 5, 0, 0],
-#         }
-#     },
-#     "TNotebook.Tab": {
-#         "configure": {
-#             "padding": [10, 2]
-#         },
-#         "map": {
-#             "background": [("selected", "#D3D3D3")],
-#             "expand": [("selected", [1, 1, 1, 0])]
-#         }
-#     },
-# })
-# style.theme_use('st')
-
 #Create Tab Control
 tab_control = ttk.Notebook(window)
 #Tab1
-tab1 = ttk.Frame(tab_control)
+tab1 = Frame(tab_control, background="white")
 tab_control.add(tab1, text='National Level')
 #Tab2
-tab2 = ttk.Frame(tab_control)
+tab2 = Frame(tab_control, background="white")
 tab_control.add(tab2, text='State Level')
 tab_control.pack(expand=1, fill="both")
-
-#Tab Name Labels
-ttk.Label(tab1, text="This is Tab 1").grid(column=0, row=0, padx=10, pady=10)
-ttk.Label(tab2, text="This is Tab 2").grid(column=0, row=0, padx=10, pady=10)
 
 # Define the Input Labels
 lbl_people_per_room = Label(tab1, text="People Per Room: ", pady=20)
@@ -135,7 +177,7 @@ entry_nc.grid(row=1, column=3)
 lbl_spacer = Label(tab1, text="")
 lbl_spacer.grid(row=2, column=0, columnspan=4)
 
-style1 = ttk.Style()
+
 btn_calculate = ttk.Button(tab1, text="Calculate", width=15,  command=click)
 btn_calculate.grid(row=3, column=0, columnspan=4)
 
@@ -144,15 +186,76 @@ lbl_spacer = Label(tab1, text="")
 lbl_spacer.grid(row=4, column=0, columnspan=4)
 
 # Output text box
-
-output_title = Text(tab1, width=110, height=5, wrap=WORD, background="white", padx=10)
+output_title = Text(tab1, width=120, height=5, wrap=WORD, relief=SUNKEN, padx=10)
 output_title.tag_configure("center", justify='center')
 output_title.configure(state='disabled')
 output_title.grid(row=5, column=0, columnspan=4)
 
-output_vals = Text(tab1, width=110, height=10, wrap=WORD, background="white", padx=10)
+output_vals = Text(tab1, width=120, height=10, wrap=WORD, padx=10)
 output_vals.grid(row=6, column=0, columnspan=4)
 output_vals.configure(state='disabled')
+
+
+
+
+# Define the Input Labels
+lbl_people_per_room_state = Label(tab2, text="People Per Room: ", pady=20)
+lbl_people_per_room_state.grid(row=0, column=0)
+
+lbl_num_employees_per_10_rooms_state = Label(tab2, text="Employees Per 10 Rooms: ")
+lbl_num_employees_per_10_rooms_state.grid(row=0, column=2)
+
+lbl_min_wage_inflation_percentage_state = Label(tab2, text="Miniumum Wage Inflation Percentage: ")
+lbl_min_wage_inflation_percentage_state.grid(row=1, column=0)
+
+lbl_nightly_compensation_state = Label(tab2, text="Nightly Hotel Compensation")
+lbl_nightly_compensation_state.grid(row=1, column=2)
+
+lbl_state = Label(tab2, text="State", pady=20)
+lbl_state.grid(row=2, column=0)
+
+# Define the Entries
+txt_people_per_room_state = DoubleVar(value=2)
+entry_ppr = Entry(tab2, textvariable=txt_people_per_room_state)
+entry_ppr.grid(row=0, column=1)
+
+txt_num_employees_per_10_rooms_state = DoubleVar(value=1)
+entry_ep10 = Entry(tab2, textvariable=txt_num_employees_per_10_rooms_state)
+entry_ep10.grid(row=0, column=3)
+
+txt_min_wage_inflation_percentage_state = DoubleVar(value=50)
+entry_mwi = Entry(tab2, textvariable=txt_min_wage_inflation_percentage_state)
+entry_mwi.grid(row=1, column=1)
+
+txt_nightly_compensation_state = DoubleVar(value=72.05)
+entry_nc = Entry(tab2, textvariable=txt_nightly_compensation_state)
+entry_nc.grid(row=1, column=3)
+
+txt_state = StringVar(value="Texas")
+entry_st = Entry(tab2, textvariable=txt_state)
+entry_st.grid(row=2, column=1)
+
+# spacer
+lbl_spacer = Label(tab2, text="")
+lbl_spacer.grid(row=3, column=0, columnspan=4)
+
+btn_calculate = ttk.Button(tab2, text="Calculate", width=15,  command=click_state)
+btn_calculate.grid(row=4, column=0, columnspan=4)
+
+# spacer
+lbl_spacer = Label(tab2, text="")
+lbl_spacer.grid(row=5, column=0, columnspan=4)
+
+# Output text box
+output_state_title = Text(tab2, width=120, height=5, wrap=WORD, background="white", padx=10)
+output_state_title.tag_configure("center", justify='center')
+output_state_title.configure(state='disabled')
+output_state_title.grid(row=6, column=0, columnspan=4)
+
+output_state_vals = Text(tab2, width=120, height=14, wrap=WORD, background="white", padx=10)
+output_state_vals.grid(row=7, column=0, columnspan=4)
+output_state_vals.configure(state='disabled')
+
 
     
 window.mainloop()
