@@ -129,6 +129,7 @@ window = Tk()
 
 width = 1000
 height = 700
+bg_color = bg_color
 
 window.title("Sheltering the Homeless During a Pandemic")
 window.geometry(str(width) + "x" + str(height))
@@ -136,24 +137,24 @@ window.geometry(str(width) + "x" + str(height))
 #Create Tab Control
 tab_control = ttk.Notebook(window)
 #Tab1
-tab1 = Frame(tab_control, background="white")
+tab1 = Frame(tab_control, background=bg_color)
 tab_control.add(tab1, text='National Level')
 #Tab2
-tab2 = Frame(tab_control, background="white")
+tab2 = Frame(tab_control, background=bg_color)
 tab_control.add(tab2, text='State Level')
 tab_control.pack(expand=1, fill="both")
 
 # Define the Input Labels
-lbl_people_per_room = Label(tab1, text="People Per Room: ", pady=20)
+lbl_people_per_room = Label(tab1, text="People Per Room: ", pady=20, background=bg_color)
 lbl_people_per_room.grid(row=0, column=0)
 
-lbl_num_employees_per_10_rooms = Label(tab1, text="Employees Per 10 Rooms: ")
+lbl_num_employees_per_10_rooms = Label(tab1, text="Employees Per 10 Rooms: ", background=bg_color)
 lbl_num_employees_per_10_rooms.grid(row=0, column=2)
 
-lbl_min_wage_inflation_percentage = Label(tab1, text="Miniumum Wage Inflation Percentage: ")
+lbl_min_wage_inflation_percentage = Label(tab1, text="Miniumum Wage Inflation Percentage: ", background=bg_color)
 lbl_min_wage_inflation_percentage.grid(row=1, column=0)
 
-lbl_nightly_compensation = Label(tab1, text="Nightly Hotel Compensation")
+lbl_nightly_compensation = Label(tab1, text="Nightly Hotel Compensation", background=bg_color)
 lbl_nightly_compensation.grid(row=1, column=2)
 
 # Define the Entries
@@ -174,7 +175,7 @@ entry_nc = Entry(tab1, textvariable=txt_nightly_compensation)
 entry_nc.grid(row=1, column=3)
 
 # spacer
-lbl_spacer = Label(tab1, text="")
+lbl_spacer = Label(tab1, text="", background=bg_color)
 lbl_spacer.grid(row=2, column=0, columnspan=4)
 
 
@@ -182,7 +183,7 @@ btn_calculate = ttk.Button(tab1, text="Calculate", width=15,  command=click)
 btn_calculate.grid(row=3, column=0, columnspan=4)
 
 # spacer
-lbl_spacer = Label(tab1, text="")
+lbl_spacer = Label(tab1, text="", background=bg_color)
 lbl_spacer.grid(row=4, column=0, columnspan=4)
 
 # Output text box
@@ -247,12 +248,12 @@ lbl_spacer = Label(tab2, text="")
 lbl_spacer.grid(row=5, column=0, columnspan=4)
 
 # Output text box
-output_state_title = Text(tab2, width=120, height=5, wrap=WORD, background="white", padx=10)
+output_state_title = Text(tab2, width=120, height=5, wrap=WORD, background=bg_color, padx=10)
 output_state_title.tag_configure("center", justify='center')
 output_state_title.configure(state='disabled')
 output_state_title.grid(row=6, column=0, columnspan=4)
 
-output_state_vals = Text(tab2, width=120, height=14, wrap=WORD, background="white", padx=10)
+output_state_vals = Text(tab2, width=120, height=14, wrap=WORD, background=bg_color, padx=10)
 output_state_vals.grid(row=7, column=0, columnspan=4)
 output_state_vals.configure(state='disabled')
 
