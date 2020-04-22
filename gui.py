@@ -564,10 +564,6 @@ class GUI(Frame):
         entry_st = Entry(state_inputs_lf, textvariable=txt_state)
         entry_st.grid(row=2, column=1)
 
-        # spacer
-        # lbl_spacer = Label(state_inputs_lf, text="", background=self.bg_color)
-        # lbl_spacer.grid(row=4, column=0, columnspan=4)
-
         btn_calculate = ttk.Button(state_inputs_lf, text="Calculate", width=15, command=click_state)
         btn_calculate.grid(row=5, column=0, columnspan=4)
     
